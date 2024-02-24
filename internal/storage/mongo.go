@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/Feinot/authorization-service/inteenal/entity"
-	"github.com/Feinot/authorization-service/inteenal/hash"
+	"github.com/Feinot/authorization-service/internal/entity"
+	"github.com/Feinot/authorization-service/internal/modules/hash"
 
 	"go.mongodb.org/mongo-driver/bson"
 )

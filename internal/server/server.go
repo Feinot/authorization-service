@@ -3,17 +3,18 @@ package server
 import (
 	"context"
 
-	"github.com/Feinot/authorization-service/inteenal/config"
-	"github.com/Feinot/authorization-service/inteenal/handlers"
-	"github.com/Feinot/authorization-service/inteenal/logger"
-	"github.com/Feinot/authorization-service/inteenal/tokens"
+	"github.com/Feinot/authorization-service/internal/config"
+	"github.com/Feinot/authorization-service/internal/handlers"
+	"github.com/Feinot/authorization-service/internal/modules/logger"
+
+	"github.com/Feinot/authorization-service/internal/tokens"
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 func Start() {
-	config, err := config.NewConfig("C:/Users/Alex/Desktop/avtor/inteenal/config/conf.yaml")
+	config, err := config.NewConfig("./conf.yaml")
 	if err != nil {
 		logger.LogError("cannot load config", err)
 	}

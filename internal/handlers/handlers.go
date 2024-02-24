@@ -1,11 +1,12 @@
 package handlers
 
 import (
-	"github.com/Feinot/authorization-service/inteenal/entity"
-	"github.com/Feinot/authorization-service/inteenal/errors"
-	"github.com/Feinot/authorization-service/inteenal/logger"
-	"github.com/Feinot/authorization-service/inteenal/storage"
-	"github.com/Feinot/authorization-service/inteenal/tokens"
+	"github.com/Feinot/authorization-service/internal/entity"
+	"github.com/Feinot/authorization-service/internal/errors"
+	"github.com/Feinot/authorization-service/internal/modules/logger"
+
+	"github.com/Feinot/authorization-service/internal/storage"
+	"github.com/Feinot/authorization-service/internal/tokens"
 	"github.com/gin-gonic/gin"
 )
 

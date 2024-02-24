@@ -21,9 +21,7 @@ func NewConfig(path string) (*Config, error) {
 		return nil, fmt.Errorf("cannot read config file: %v", err)
 	}
 
-	err = yaml.Unmarshal(yamlFile, c)
-
-	if err != nil {
+	if err = yaml.Unmarshal(yamlFile, c); err != nil {
 		return nil, fmt.Errorf("cannot unmarshal config file: %v", err)
 	}
 

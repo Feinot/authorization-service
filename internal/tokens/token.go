@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Feinot/authorization-service/inteenal/entity"
+	"github.com/Feinot/authorization-service/internal/entity"
 	"github.com/golang-jwt/jwt"
 	"github.com/google/uuid"
 	"go.mongodb.org/mongo-driver/mongo"

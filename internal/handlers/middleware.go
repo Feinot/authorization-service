@@ -1,10 +1,9 @@
 package handlers
 
 import (
-	"github.com/Feinot/authorization-service/inteenal/entity"
-	"github.com/Feinot/authorization-service/inteenal/errors"
-	"github.com/Feinot/authorization-service/inteenal/logger"
-	"github.com/Feinot/authorization-service/inteenal/storage"
+	"github.com/Feinot/authorization-service/internal/entity"
+	"github.com/Feinot/authorization-service/internal/errors"
+	"github.com/Feinot/authorization-service/internal/storage"
 	"github.com/gin-gonic/gin"
 )
 
@@ -25,7 +24,7 @@ func RefreshMiddleware(next gin.HandlerFunc, t *entity.Tokens) gin.HandlerFunc {
 		if err != nil {
 
 			errors.RespondWithError(c, internalServerErrorCode, "Server error")
-			logger.LogError("cannot find RToken", err)
+
 			return
 		}
 		if ok {
